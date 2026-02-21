@@ -1,0 +1,32 @@
+.block {
+  display: block;
+  border: 2px solid black;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.inline {
+  display: inline;
+  border: 1px solid gray;
+  padding: 5px;
+}
+
+.space {
+  height: 15px;
+}
+
+.inline-block {
+  display: inline-block;
+  width: 140px;
+  height: 50px;
+  border: 2px solid blue;
+  margin: 5px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.none {
+  display: none;
+  border: 2px solid red;
+  padding: 10px;
+}

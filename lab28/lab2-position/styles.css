@@ -1,0 +1,55 @@
+.box {
+  width: 180px;
+  padding: 10px;
+  border: 2px solid black;
+  margin: 10px 0;
+}
+
+.static {
+  position: static;
+  background: #eee;
+}
+
+.relative {
+  position: relative;
+  left: 30px;
+  top: 10px;
+  background: #dff0ff;
+}
+
+.parent {
+  position: relative;
+  width: 350px;
+  height: 180px;
+  border: 2px dashed gray;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.absolute {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: #ffe5d1;
+}
+
+.fixed {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: #ffd1dc;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  border: 2px solid green;
+  background: #e6ffe6;
+  margin-top: 20px;
+}
+
+.content {
+  height: 900px;
+  margin-top: 20px;
+}
