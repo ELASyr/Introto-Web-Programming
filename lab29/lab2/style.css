@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.gradient {
+  width: 320px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 22px;
+  border-radius: 14px;
+}
+
+.linear {
+  background: linear-gradient(to right, #ff5733, #ffcc00);
+  /* try: to left, to bottom, 45deg */
+}
+
+.radial {
+  background: radial-gradient(circle, #00c6ff, #0072ff);
+  /* try: different colors / stops */
+}
