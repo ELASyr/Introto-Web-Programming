@@ -1,0 +1,19 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* try: center, space-around */
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  border: 2px solid black;
+  padding: 12px;
+}
+
+.nav-item {
+  text-decoration: none;
+  border: 2px solid black;
+  padding: 8px 12px;
+  flex-grow: 1;
+  text-align: center;
+  color: black;
+}
