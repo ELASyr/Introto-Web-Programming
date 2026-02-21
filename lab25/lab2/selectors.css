@@ -1,0 +1,13 @@
+p {
+    color: green;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+#main-title {
+    color: blue;
+    text-align: center;
+}

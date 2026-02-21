@@ -1,0 +1,12 @@
+#title {
+    color: darkblue;
+    text-align: center;
+}
+
+p {
+    color: darkgreen;
+}
+
+.highlight {
+    background-color: lightblue;
+}
