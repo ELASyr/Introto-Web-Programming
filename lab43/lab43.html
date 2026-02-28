@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        #style, #textBox {
+            width: 200px;
+            height: auto;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            font-size: 14px;
+            background-color: purple;
+        }
+
+        #textStyle {
+            width: 200px;
+            height: auto;
+            padding: 10px;
+            text-align: center;
+            background-color: orange;
+        }
+
+        .change {
+            color: blue;
+            font-weight: bold;
+            border: 5px solid black;
+        }
+
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: darksalmon;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            position: absolute;
+        }
+
+        #move {
+            position: absolute;
+        }
+    </style>
+    
+    <title>Lab 43</title>
+</head>
+
+<body>
+    <p id="style">Manipulating CSS with JavaScript allows dynamic changes to the appearance of a webpage,
+        making interfaces interactive and responsive to user actions. </p>
+    <button id="changeStyle">Change color and size</button>
+
+    <p id="textStyle">Directly modifying styles via JavaScript allows for dynamic updates based on 
+        user interactions, system states, or other conditions.</p>
+    <button id="toggle">Toggle</button>
+
+    <p id="textBox">It will fade out</p>
+    <button id="fadeOut">Fade the box</button>
+
+    <p id="textBlink">This text will change color</p>
+
+    <div id="box"></div>
+    <button id="move">Move box</button>
+
+
+    <script>
+        let btn = document.getElementById("changeStyle");
+        let text = document.getElementById("style");
+
+        btn.onclick = function() {
+            text.style.backgroundColor = "green";
+            text.style.color = "yellow";
+            text.style.fontSize = "18px";
+        }
+
+        let buttonStyle = document.getElementById("toggle");
+        let textStyle = document.getElementById("textStyle");
+
+        buttonStyle.onclick = function() {
+            textStyle.classList.toggle("change");
+        }
+
+        let btnFade = document.getElementById("fadeOut");
+        let textBox = document.getElementById("textBox");
+
+        btnFade.onclick = function() {
+            let opacity = 1;
+            
+            function fade() {
+                if (opacity > 0) {
+                    opacity -= 0.1;
+                    textBox.style.opacity = opacity;
+                    setTimeout(fade, 100);
+                }
+            }
+
+            fade();
+        }
+
+        let box = document.getElementById("box");
+        let btnMove = document.getElementById("move");
+        let position = 0;
+
+        btnMove.onclick = function() {
+            let interval = setInterval(() => {
+                if (position < 300) {
+                    position += 5;
+                    box.style.left = position + "px";
+                } else {
+                    clearInterval(interval);
+                }
+            }, 50);
+        }
+
+        let blink = document.getElementById("textBlink");
+
+        setInterval(() => {
+            blink.style.color = blink.style.color === "red" ? "blue" : "red";
+        }, 1000);
+    </script>
+</body>
+</html>
